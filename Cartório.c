@@ -66,7 +66,7 @@ int consulta()
     strcpy(nomeArquivo, cpf); //Copia o CPF para a variável 'nomeArquivo'
     
     FILE *file; //Cria o arquivo
-    file = fopen(nomeArquivo, "r"); //O "r" significa que ele vai ser o arquivo
+    file = fopen(nomeArquivo, "r"); //O "r" significa que ele vai ler o arquivo
     
     if (file == NULL) //Se o arquivo não exite ou não foi criado 
     {
@@ -148,6 +148,7 @@ int main()
 	    printf("\t1 - Registrar nomes\n");
 	    printf("\t2 - Consultar nomes\n");
 	    printf("\t3 - Deletar nomes\n\n"); 
+	    printf("\t4 - Sair do sistema\n");
 	    printf("Opção: ");//Fim do menu
 	
     	 scanf("%d", &opcao); //Armazenando a escolha do usuário
@@ -167,6 +168,13 @@ int main()
     	case 3:
     	deletar();
 		break;
+		
+		case 4:
+			printf("Obriado por utilizar o sistema!\n");
+			return 0;
+			break;
+				
+		
 		
 		default:
 			printf("Está opção não esta disponivel!\n");
